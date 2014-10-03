@@ -5,7 +5,6 @@ var _ = require('lodash');
 var MainView = require('./views/main');
 var Router = require('./router');
 var loadcss = require('./lib/loadcss');
-var browser = require('bowser').browser;
 
 
 module.exports = {
@@ -17,6 +16,8 @@ module.exports = {
     //Wait for the DOM to be rendered.
     $(document).ready(function () {
       loadcss('/css/main.css');
+      loadcss('http://fonts.googleapis.com/css?family=Open+Sans:' +
+              '300italic,400italic,700italic,400,700,300|Source+Serif+Pro:400,600&subset=latin,latin-ext');
 
       //Initialize the main view.
       var mainView = self.view = new MainView({

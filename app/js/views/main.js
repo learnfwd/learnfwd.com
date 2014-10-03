@@ -4,6 +4,7 @@
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
 var $ = require('../shims/jquery');
+var _ = require('lodash');
 var ViewSwitcher = require('ampersand-view-switcher');
 var templates = require('../lib/templates');
 
@@ -17,10 +18,25 @@ module.exports = View.extend({
     var self = this;
     this.$el.html(this.template());
 
+    function getClasses(view) {
+      if (typeof(view) !== 'object' || typeof(view.customDocumentClasses) !== 'function') {
+        return [];
+      }
+      return view.customDocumentClasses();
+    }
+
     this.pageSwitcher = new ViewSwitcher(this.$('[role="page-container"]')[0], {
       show: function (newView) {
         document.title = newView.pageTitle || 'Read Foward';
         window.scrollTo(0, 0);
+        var html = $('html');
+        _.each(self.documentClasses, function (c) {
+          html.removeClass(c);
+        });
+        self.documentClasses = getClasses(newView);
+        _.each(self.documentClasses, function (c) {
+          html.addClass(c);
+        });
 
         app.currentPage = newView;
       }

@@ -1,12 +1,14 @@
-@import hero
-@import call-to-action
-@import contact
-@import about
+@import mainStripe
 
 body
   line-height: 1.5em
   background: #eee
-  padding-top: 60px
+  [role="page-container"]
+    padding-top: 150px
+.home-page
+  [role="page-container"]
+    padding-top: 0
+
 .content
   padding: 25px
   background: white
@@ -16,3 +18,34 @@ body
   @media(max-width: 992px)
     p
       text-align: center
+nav
+  position: absolute
+  .logo
+    width: 10%
+    height: auto
+    @media (max-width: 768px)
+      width: 20%
+    img
+      width: 100%
+  .menu
+    position: absolute
+    top: 50%;
+    right: 0;
+    transform: translate(-50%, -50%);
+    a
+      margin: 0.3em
+      &:hover
+        text-decoration: none
+  @media (max-width: 768px)
+    .menu
+      position: relative
+      margin-top: 1em
+      text-align: center
+      left: 50%
+      transform: translateX(-50%)
+    .logo
+      position: relative
+      left: 50%
+      transform: translateX(-50%)
+.stripe
+  height: 450px

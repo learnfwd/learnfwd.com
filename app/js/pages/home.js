@@ -11,6 +11,11 @@ module.exports = View.extend({
   template: templates.pages.home,
   render: function () {
     this.$el.html(this.template());
+    this.$el.removeClass('page').addClass('home');
     return this;
-  }
+  },
+
+  customDocumentClasses: function () {
+    return ['home-page'];
+  },
 });

@@ -5,9 +5,8 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 
 module.exports = View.extend({
-  pageTitle: 'Read Forward | Contact',
-  template: templates.pages.contact,
-  
+  pageTitle: 'Read Forward | About Us',
+  template: templates.pages.features,
   render: function () {
     this.$el.html(this.template());
     return this;

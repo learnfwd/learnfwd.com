@@ -4,13 +4,19 @@ var Router = require('ampersand-router');
 
 var HomePage = require('./pages/home');
 var ContactPage = require('./pages/contact');
-var AboutUsPage = require('./pages/about');
+var FeaturesPage = require('./pages/features');
+var DemoPage = require ('./pages/demo');
+var PricingPage = require ('./pages/pricing');
+var TeamPage = require ('./pages/team');
 
 module.exports = Router.extend({
   routes: {
     '': 'home',
     'contact/': 'contact',
-    'about/': 'about'
+    'features/': 'features',
+    'demo/': 'demo',
+    'pricing/': 'pricing',
+    'team/': 'team'
   },
 
   //Handlers
@@ -22,7 +28,19 @@ module.exports = Router.extend({
     this.trigger('newPage', new ContactPage({}));
   },
 
-  about: function () {
-    this.trigger('newPage', new AboutUsPage({}));
+  features: function () {
+    this.trigger('newPage', new FeaturesPage({}));
+  },
+
+  demo: function () {
+    this.trigger('newPage', new DemoPage({}));
+  },
+
+  pricing: function () {
+    this.trigger('newPage', new PricingPage({}));
+  },
+
+  team: function () {
+    this.trigger('newPage', new TeamPage({}));
   }
 });
