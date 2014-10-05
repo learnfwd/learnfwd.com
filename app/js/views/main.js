@@ -11,13 +11,15 @@ var templates = require('../lib/templates');
 module.exports = View.extend({
   template: templates.body,
   events: {
-    'click a[href]:not([rel="download"])': 'handleLinkClick'
+    'click a[href]:not([rel="download"])': 'handleLinkClick',
+    'scroll': 'handleScrolling'
   },
 
   render: function () {
     var self = this;
     this.$el.html(this.template());
 
+    $(window).scroll(this.handleScrolling.bind(this));
     function getClasses(view) {
       if (typeof(view) !== 'object' || typeof(view.customDocumentClasses) !== 'function') {
         return [];
@@ -66,6 +68,14 @@ module.exports = View.extend({
     if (local) {
       e.preventDefault();
       app.navigate(path);
+    }
+  },
+  handleScrolling: function () {
+    var scrollPos = $(window).scrollTop();
+    if(scrollPos > $(window).height() - 50) {
+        this.$(".navbar").addClass('small');
+    } else {
+      this.$(".navbar").removeClass('small');
     }
   }
 });

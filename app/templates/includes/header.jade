@@ -1,12 +1,18 @@
-.container
-  nav.navbar.navbar-fixed-top.main-nav(role="navigation")
-    .logo
-      a(href="/")
+nav.navbar.navbar-fixed-top.main-nav(role="navigation")
+  .container
+    .navbar-header
+      button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-collapse")
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.logo(class="navbar-brand", href="/")
         img(src="/assets/img/logo-learnfwd-03.png")
-    .menu
-      a(href="/") Home
-      a(href="/demo/") Demo
-      a(href="/features/") Features
-      a(href="/team/") Team
-      a(href="/pricing/") Pricing
-      a(href="/contact/") Contact
+    .collapse.navbar-collapse(id="navbar-collapse")
+      ul.nav.navbar-nav.menu
+        li: a(href="/") Home
+        li: a(href="/demo/") Demo
+        li: a(href="/features/") Features
+        li: a(href="/team/") Team
+        li: a(href="/pricing/") Pricing
+        li: a(href="/contact/") Contact
