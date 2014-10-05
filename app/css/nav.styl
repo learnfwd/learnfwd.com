@@ -1,32 +1,34 @@
 nav
   position: absolute
-  // background-color:rgba(0,0,0,0.6);
   .logo
-    width: 8%
+    width: 20%
     height: auto
-    @media (max-width: 768px)
-      width: 20%
+    // @media (max-width: 768px)
+    //   width: 20%
     img
       width: 100%
   .menu
-    position: absolute
-    top: 50%;
-    right: 0;
-    transform: translate(-10%, -50%);
+    margin-top: 30px
     a
       color: white
-      margin: 0.3em 1em
+
       &:hover
         text-decoration: none
         border-bottom: 2px solid #fff
-  @media (max-width: 768px)
-    .menu
-      position: relative
-      margin-top: 1em
-      text-align: center
-      left: 50%
-      transform: translateX(-50%)
-    .logo
-      position: relative
-      left: 50%
-      transform: translateX(-50%)
+.navbar.small
+  background-color:rgba(0,0,0,2.6);
+  .logo
+    width: 10%
+  .menu
+    margin-top: 10px 
+  // @media (max-width: 768px)
+  //   .menu
+  //     position: relative
+  //     margin-top: 1em
+  //     text-align: center
+  //     left: 50%
+  //     transform: translateX(-50%)
+  //   .logo
+  //     position: relative
+  //     left: 50%
+  //     transform: translateX(-50%)
