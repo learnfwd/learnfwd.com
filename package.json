@@ -4,7 +4,7 @@
   "engines": {
     "node": "0.10.29"
   },
-  "description": "Source code for the readfwd.com website.",
+  "description": "Source code for the learnfwd.com website.",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/gulp/bin/gulp.js test:once && if [ $CI ]; then npm run coveralls; fi",
@@ -12,19 +12,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/readfwd/readfwd.com"
+    "url": "https://github.com/learnfwd/learnfwd.com"
   },
   "keywords": [
-    "readfwd",
-    "read",
-    "forward"
+    "learnfwd",
+    "learn",
+    "forward",
+    "education",
+    "ed-tech company",
+    "digital textbooks"
   ],
   "author": "ReadFwd LLC",
   "license": "CC-BY-NC-SA",
   "bugs": {
-    "url": "https://github.com/readfwd/readfwd.com/issues"
+    "url": "https://github.com/learnfwd/learnfwd.com/issues"
   },
-  "homepage": "https://github.com/readfwd/readfwd.com",
+  "homepage": "https://github.com/learnfwd/learnfwd.com",
   "dependencies": {
     "ampersand-router": "^1.0.2",
     "ampersand-view-switcher": "^1.0.2",

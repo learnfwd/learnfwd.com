@@ -27,7 +27,7 @@ module.exports = View.extend({
 
     this.pageSwitcher = new ViewSwitcher(this.$('[role="page-container"]')[0], {
       show: function (newView) {
-        document.title = newView.pageTitle || 'Read Foward';
+        document.title = newView.pageTitle || 'Learn Foward';
         window.scrollTo(0, 0);
         var html = $('html');
         _.each(self.documentClasses, function (c) {
