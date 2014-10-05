@@ -72,7 +72,7 @@ module.exports = View.extend({
   },
   handleScrolling: function () {
     var scrollPos = $(window).scrollTop();
-    if(scrollPos > $(window).height() - 50) {
+    if(scrollPos > $(window).height() - 500) {
         this.$(".navbar").addClass('small');
     } else {
       this.$(".navbar").removeClass('small');
