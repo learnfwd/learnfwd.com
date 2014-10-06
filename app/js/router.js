@@ -8,10 +8,12 @@ var FeaturesPage = require('./pages/features');
 var DemoPage = require ('./pages/demo');
 var PricingPage = require ('./pages/pricing');
 var TeamPage = require ('./pages/team');
+var ManifestoPage = require('./pages/manifesto');
 
 module.exports = Router.extend({
   routes: {
     '': 'home',
+    'manifesto/': 'manifesto',
     'contact/': 'contact',
     'features/': 'features',
     'demo/': 'demo',
@@ -26,6 +28,10 @@ module.exports = Router.extend({
 
   contact: function () {
     this.trigger('newPage', new ContactPage({}));
+  },
+
+  manifesto: function () {
+    this.trigger('newPage', new ManifestoPage({}));
   },
 
   features: function () {

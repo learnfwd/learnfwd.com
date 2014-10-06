@@ -10,5 +10,8 @@ module.exports = View.extend({
   render: function () {
     this.$el.html(this.template());
     return this;
-  }
+  },
+  customDocumentClasses: function () {
+    return ['features-page'];
+  },
 });
