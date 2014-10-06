@@ -1,21 +1,26 @@
 nav.navbar.navbar-fixed-top(role="navigation")
-  .navbar-header
-    button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-collapse")
-      span.sr-only Toggle navigation
-    .logo.navbar-brand
-      a(href="/")
-        img(src="/assets/img/logo-learnfwd-03.png")
-    .collapse.navbar-collapse(id="navbar-collapse")
-      ul.nav.navbar-nav.navmenu
-        li.dropdown-toggle
-          a(href="/") Home
-        li
-          a(href="/demo/") Demo
-        li
-          a(href="/features/") Features
-        li
-          a(href="/team/") Team
-        li
-          a(href="/pricing/") Pricing
-        li
-          a(href="/contact/") Contact
+  .container
+    .navbar-header
+      button.navbar-toggle(type="button", data-toggle="collapse", data-target="#navbar-collapse")
+        i.fa.fa-bars
+      .navbar-brand
+        .logo
+          a(href="/")
+            img(src="/assets/img/logo-learnfwd-03.png")
+        span.title
+          span.brand LearnFwd
+          span.continuation : context-aware digital textbooks
+      .collapse.navbar-collapse(id="navbar-collapse")
+        ul.nav.navbar-nav.navmenu
+          li.dropdown-toggle
+            a(href="/") Home
+          li
+            a(href="/demo/") Demo
+          li
+            a(href="/features/") Features
+          li
+            a(href="/team/") Team
+          li
+            a(href="/pricing/") Pricing
+          li
+            a(href="/contact/") Contact

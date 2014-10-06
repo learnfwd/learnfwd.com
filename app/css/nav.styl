@@ -1,15 +1,14 @@
 nav
   position: absolute
-  .logo
-    width: 40%
-    height: auto
+  .logo img
+    width: auto
+    height: 7em
 
-    @media (max-width: 991px)
-      width: 15%
-    @media (max-width: 768px)
-      width: 25%
-    img
-      width: 100%
+  .title
+    display: none
+
+
+
   .navmenu
     position: absolute
     right: 10%
@@ -20,20 +19,50 @@ nav
       right: 0
       top: 0
       transform: none
-
     a
       color: white
+      border-bottom: 2px solid rgba(0, 0, 0, 0)
       &:hover
+      &:active
         text-decoration: none
-        border-bottom: 2px solid #fff
+        border-bottom-color: #fff
   .container
     position: relative
+  .navbar-brand
+    color: #ccc
+
+@media (max-width: 991px)
+  .navbar:not(.nav-scrolled)
+    .navbar-toggle
+      z-index: 20
+
+    .navbar-collapse
+      &.collapsing
+      &.collapse.in
+        background-color:rgba(0, 0, 0, 0.8)
+        position: absolute
+        left: 0
+        right: 0
+        top: 0
+
+.navbar.nav-scrolled
+  background-color:rgba(0, 0, 0, 0.8);
+
+
+  .logo
+    display: none
+  .title
+    display: inline-block
+
+    @media (max-width: 768px)
+      .continuation
+        display: none
 
 .navbar.small
   background-color:rgba(0,0,0,2.6);
   .logo > img
     width: 70%
-    // margin-top: 20px 
+    // margin-top: 20px
   //   .menu
   //     position: relative
   //     margin-top: 1em
