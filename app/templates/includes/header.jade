@@ -5,12 +5,17 @@ nav.navbar.navbar-fixed-top(role="navigation")
     .logo.navbar-brand
       a(href="/")
         img(src="/assets/img/logo-learnfwd-03.png")
-        span LearnFwd - context-aware digital textbooks
-    .collapse.navbar-collapse.navbar-right.menu(id="navbar-collapse")
-      ul.nav.navbar-nav
-        li: a(href="/") Home
-        li: a(href="/demo/") Demo
-        li: a(href="/features/") Features
-        li: a(href="/team/") Team
-        li: a(href="/pricing/") Pricing
-        li: a(href="/contact/") Contact
+    .collapse.navbar-collapse(id="navbar-collapse")
+      ul.nav.navbar-nav.navmenu
+        li.dropdown-toggle
+          a(href="/") Home
+        li
+          a(href="/demo/") Demo
+        li
+          a(href="/features/") Features
+        li
+          a(href="/team/") Team
+        li
+          a(href="/pricing/") Pricing
+        li
+          a(href="/contact/") Contact
