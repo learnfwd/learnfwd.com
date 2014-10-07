@@ -18,6 +18,7 @@ module.exports = Router.extend({
     'features/': 'features',
     'demo/': 'demo',
     'pricing/': 'pricing',
+    'editions/': 'pricing',
     'team/': 'team'
   },
 

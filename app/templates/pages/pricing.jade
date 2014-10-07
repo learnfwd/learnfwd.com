@@ -1,84 +1,85 @@
-.stripe
+.container
   .pricing
-    section.layer.plans
-      section
-        h1.title Editions & Pricing
-        section.third.lift.plan-tier.lfwd-author(onclick='location.href=\'#\';')
-          .editions
-            h4.sans
-              span.thin LearnFwd 
-              |Author
-          h5
-            //- sup.superscript $
-            span.plan-price free
-            //- sub  /mo
-          p.early-adopter-price Open source
-          br
-          del $10/mo
-          ul
-            li
-              strong 1
-              | site
-            li
-              strong 1
-              | user
-            li
-              strong Free hosting
-              | (beta)
-            li
-              | 14 day
-              strong free trial
-        section.third.lift.plan-tier.lfwd-classroom(onclick='location.href=\'#\';')
-          .editions
-            h4.sans
-              span.thin LearnFwd 
-              |Classroom
-          h5
-            sup.superscript $
-            span.plan-price 20
-            sub  /mo
-          p.early-adopter-price Early adopter price
-          br
-          del $40/mo
-          ul
-            li
-              | Up to
-              strong 10
-              | sites
-            li
-              | Up to
-              strong 10
-              | users per site
-            li
-              strong Free hosting
-              | (beta)
-            li
-              | 14 day
-              strong free trial
-        section.third.lift.plan-tier.lfwd-pro(onclick='location.href=\'#\';')
-          .editions
-            h4.sans
-              span.thin LearnFwd 
-              |Pro
+    h1.title Editions
+    .row
+      .col-sm-4: .content
+        h2.sans
+          span.thin LearnFwd 
+          |Author
+        hr
+        p Authoring tool for everyone to try
+        p.small.description Our core technology for creating advanced html5 digital textbooks. We keep it open-source and totally free for everybody to use. It is a command-line tool that help you build digital textbook that you can open in your own browser, no server-side or other app needed. Technologies used: HTML5, CSS, Javascript, node.js. 
 
-          h5
-            sup.superscript $
-            span.plan-price 100
-            sub  /mo
-          p.early-adopter-price Early adopter price
-          br
-          del $200/mo
-          ul
-            li
-              strong Unlimited
-              | sites
-            li
-              strong Unlimited
-              | users
-            li
-              strong Free hosting
-              | (beta)
-            li
-              | 14 day
-              strong free trial
-        div(style='clear: both;')
+        hr
+        h4 free to use 
+        hr
+        ul
+            br
+            span see 
+              a.black.understyle(href="https://github.com/learnfwd/lfa") https://github.com/learnfwd/lfa
+          li no reader required: your browser is the best reader in the world
+          li built using open standards: HTML5, CSS, Javascript, Node.js. In fact LearnFwd Author is a node package (try `npm install -g lfa`). 
+          li super-fast command-line tool that uses mainly HTML (jade precompiler) and CSS (stylus precompiler) to produce clean HTML5 textbooks
+          li works both offline (local folder, CD) and online (on all kinds of web servers)
+          li automatically saves user's progress in local storage (all results to exercises, all notes, etc.)
+      .col-sm-4: .content
+        h2.sans
+          span.thin LearnFwd 
+          |Classroom
+        hr
+        p Add powerful exercises and collaborative features for in-classroom use
+        p.small.description Built upon LearnFwd 
+          span.strong Author 
+          | but featuring advanced plugins for automatic backup of user’s progress, creating and using complex self-validating exercises and real-time collaborative features tailored for in-classroom use (create / join classrooms, work in groups, share results etc.). Collaborative features require internet connection. 
+        hr
+        h4 
+          a(href="/contact/") price on request
+        hr
+        h4 10+ types of exercises
+        ul
+          li "pick one" (single choice)
+          li "select to highlight" (multiple-choice on all kinds of elements: images, text, buttons)
+          li "yes/no" (chose whether the statement is true or false)
+          li "free drawing pad" (automatically saved)
+          li "validated textline" (free writing areas validated with regular expressions)
+          li "drag and sort" (arrange items in the correct order: images, lists, boxes, etc.)
+          li "drag to bucket" (group items that satisfy a certain criterion)
+          li "split words/sentences" (split a string of text: e.g. split in syllables, add correct punctuation marks, etc.)
+          li "combine elements" (e.g. combine syllables in words, words in phrases, etc.; validate results based on provided dictionary)
+          li "connect points" (make the right connections; e.g. labels to photos)
+          li "arithmetic exercises" (validate results using equations)
+        h4 Classroom features
+        ul
+          li create classrooms and invite people to join in 
+          li join existing classrooms (regardless of your physical presence)
+          li discover classrooms based on geographical proximity (using geolocation)
+          li select a work group inside a classroom to share results and collaborate directly
+        h4 Avatar
+        ul
+          li customised help
+          li reacts to success / progrss & failure in solving the exercises
+          li interacts with the student
+          li especially suited for primary and secondary education
+        h4 Backup and restore (experimental)
+        ul
+          li backup your data locally in a file
+          li restore your data from a local file using another browser
+      .col-sm-4: .content
+        h2.sans
+          span.thin LearnFwd 
+          |Pro
+        hr
+        p Hosted platform for universities that provide on-line, real-time courses
+        p.small.description Built upon LearnFwd 
+          span.strong Classroom 
+          |but featuring a hosted online platform that allows professors to create and customise learning materials using WYSIWYG editors. Add centralised management of students, classes and learning materials and you’ve got yourself a very useful real-time software for higher education.  
+        hr
+        h4 
+          a(href="/contact/") forthcoming
+        hr
+        ul
+          li Hosted platform (no local server required)
+          li Simple WYSIWYG editor for educational materials
+          li Centrally managed accounts for professors & students
+          li Central catalogues of courses that students can join
+          li Real-time collaboration among any remote points of access
