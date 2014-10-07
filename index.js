@@ -19,6 +19,9 @@ if (process.env.REDISCLOUD_URL) {
   app.use(seo());
 }
 
-app.use('/', express.static(__dirname + '/dist'));
-app.listen(process.env.PORT);
+app.use(express.static(__dirname + '/dist'));
 
+app.get('*', function(request, response) {
+  response.sendFile(__dirname + '/dist/index.html');
+});
+app.listen(process.env.PORT);
