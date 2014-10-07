@@ -8,11 +8,11 @@ body
   line-height: 1.5em
   background: url('/assets/img/bg-dark.jpg') #444
   color: black
-  letter-spacing: 0.1em
+  letter-spacing: 0.05em
   [role="page-container"]
     padding-top: 150px
 
-.home-page, .pricing-page
+.home-page
   [role="page-container"]
     padding-top: 0
 
@@ -21,13 +21,13 @@ body
     background-image: url('/assets/img/bg-green.jpg')
 .features-page
   [role="page-container"]
-    background-image: url('/assets/img/bg-orange.jpg')
+    background-image: url('/assets/img/bg-bulbs.jpg')
     background-size: cover
     background-position: center center
     min-height: 100vh
 .team-page
   [role="page-container"]
-    background-image: url('/assets/img/bg-readfwd.jpg')
+    background-image: url('/assets/img/bg-team.jpg')
     background-size: cover
     background-position: center center
     min-height: 100vh
@@ -42,10 +42,18 @@ body
     // width: 100vw
     // height: 100vh
 
+.container 
+  color: white
+  &.container-contact
+    .content
+      padding-left: 1em
+      padding-right: 1em
+      
 
 .content
   padding: 25px 0px
   background: white
+  color: black
   &.content-manifesto
     background: rgba(200,0,0,0.8)
     color: white
@@ -69,9 +77,9 @@ body
       color: black
       padding: 1em
       margin-bottom: 2em
+  &.content-features
+    padding: 1em
 
-      h3.cursive
-        margin-bottom: 1em
 .footer
   padding-top: 0.5em
   padding-bottom: 0.1em
@@ -109,3 +117,24 @@ body
     width: 100vw
     color: white
     overflow: hidden
+
+.vevent
+  padding: 1em
+  background: #ccc
+  .summary
+    font-family: lfwd-sans
+  .when, .where, .categ, .description
+    margin-top: 0.8em
+  .when, .where, span.fn.org
+    font-weight: 400
+
+a.understyle
+  color: white
+  font-weight: 300
+  border-bottom: 1px solid white
+  &:hover
+    text-decoration: none
+    border-bottom: 2px solid white
+  &.black
+    color: black
+    border-color: black
