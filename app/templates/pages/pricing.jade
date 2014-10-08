@@ -1,6 +1,8 @@
 .container
   .pricing
     h1.title Editions
+    p.sans or 
+      a.understyle(href="/demo/") skip to the demo
     .row
       .col-sm-4: .content
         h2.sans
@@ -32,8 +34,14 @@
           span.strong Author 
           | but featuring advanced plugins for automatic backup of user’s progress, creating and using complex self-validating exercises and real-time collaborative features tailored for in-classroom use (create / join classrooms, work in groups, share results etc.). Collaborative features require internet connection. 
         hr
-        h4 
-          a(href="/contact/") price on request
+        .row
+          .col-sm-6
+            .text-center
+              a(href="/demo/")
+                button.btn.btn-lg.btn-default SEE DEMO
+          .col-sm-6
+            h4: a(href="/contact/") price on request
+
         hr
         h4 10+ types of exercises
         ul
