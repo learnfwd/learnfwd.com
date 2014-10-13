@@ -7,7 +7,7 @@ var templates = require('../lib/templates');
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({
-  pageTitle: 'Read Forward | Home',
+  pageTitle: 'Learn Forward | Home',
   template: templates.pages.home,
   render: function () {
     this.$el.html(this.template());

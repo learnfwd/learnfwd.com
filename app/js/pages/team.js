@@ -5,7 +5,7 @@ var View = Backbone.View;
 var templates = require('../lib/templates');
 
 module.exports = View.extend({
-  pageTitle: 'Read Forward | About Us',
+  pageTitle: 'Learn Forward | Team',
   template: templates.pages.team,
   render: function () {
     this.$el.html(this.template());
