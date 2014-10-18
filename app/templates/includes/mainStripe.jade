@@ -8,7 +8,7 @@
       a.btn.btn-lg.btn-bigaction(data-toggle="modal", data-target="#demo-modal") Demo
       a.btn.btn-lg.btn-bigaction(href="https://github.com/learnfwd/lfa", target="_blank") Get on Github
 
-#demo-modal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='demo-modal-label', aria-hidden='true')
+#demo-modal.modal.fade.modal-wide(tabindex='-1', role='dialog', aria-labelledby='demo-modal-label', aria-hidden='true')
   .modal-dialog
     .modal-content
       .modal-header
@@ -19,9 +19,9 @@
       .modal-body
         include ./demoInfo.jade
         //- | something
-      .modal-footer
-        button.btn.btn-default(type='button', data-dismiss='modal') Close
-        a(href="http://demo.learnfwd.com")
-          button.btn.btn-primary(type='button') Demo
+      //- .modal-footer
+      //-   button.btn.btn-default(type='button', data-dismiss='modal') Close
+      //-   a(href="http://demo.learnfwd.com")
+      //-     button.btn.btn-primary(type='button') Demo
     //- a(href="/contact/")
       //-   img.frankfurt(src="/assets/img/frankfurt.jpg", alt="Frankfurt Bookfair, 8-12 2014, Hall 8.0, Booth M148")
