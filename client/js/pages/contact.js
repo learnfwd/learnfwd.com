@@ -2,16 +2,14 @@
 
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
-var templates = require('../lib/templates');
+var templates = require('templates');
 
 module.exports = View.extend({
-  pageTitle: 'Learn Forward | Team',
-  template: templates.pages.team,
+  pageTitle: 'Learn Forward | Contact',
+  template: templates.pages.contact,
+
   render: function () {
     this.$el.html(this.template());
     return this;
-  },
-  customDocumentClasses: function () {
-    return ['team-page'];
-  },
+  }
 });

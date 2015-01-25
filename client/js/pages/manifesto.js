@@ -2,7 +2,7 @@
 
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
-var templates = require('../lib/templates');
+var templates = require('templates');
 
 module.exports = View.extend({
   pageTitle: 'Learn Forward | Manifesto',

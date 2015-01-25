@@ -3,10 +3,10 @@
 /* global app */
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
-var $ = require('../shims/jquery');
+var $ = require('jquery');
 var _ = require('lodash');
 var ViewSwitcher = require('ampersand-view-switcher');
-var templates = require('../lib/templates');
+var templates = require('templates');
 
 module.exports = View.extend({
   template: templates.body,

@@ -1,9 +1,8 @@
 'use strict';
 
-/* global app */
 var Backbone = require('../shims/backbone');
 var View = Backbone.View;
-var templates = require('../lib/templates');
+var templates = require('templates');
 // var QuoteBoxView = require('../views/quote-box');
 
 module.exports = View.extend({

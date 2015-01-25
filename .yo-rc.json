@@ -1,0 +1,17 @@
+{
+  "generator-ayen": {
+    "appName": "Learn Forward",
+    "authorName": "LearnFoward LLC",
+    "authorMail": "hello@learnfwd.com",
+    "githubName": "learnfwd",
+    "packageName": "learnfwd.com",
+    "stagingURL": "http://learnfwd.com",
+    "description": "Context-aware digital textbooks",
+    "keywords": "digital textbooks, software, open source, new paradigm, digital education, modern education, software solution, educational publishers, epub3, html5, javascript",
+    "cssPrecompiler": "stylus",
+    "compilerFeatures": [
+      "templates"
+    ],
+    "templateType": "backbone"
+  }
+}

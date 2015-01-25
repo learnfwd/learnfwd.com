@@ -1,12 +1,11 @@
 {
   "name": "learnfwd.com",
-  "version": "0.1.0",
+  "version": "0.0.1",
   "homepage": "https://github.com/learnfwd/learnfwd.com",
   "authors": [
-    "ReadFwd <deploy@readfwd.com>"
+    "LearnFoward LLC <hello@learnfwd.com>"
   ],
-  "description": "Website.",
-  "license": "MPLv2",
+  "description": "Context-aware digital textbooks",
   "ignore": [
     "**/.*",
     "node_modules",
@@ -16,8 +15,6 @@
   ],
   "dependencies": {
     "bootstrap": "~3.2.0",
-    "fontawesome": "~4.1.0",
-    "CreativeLinkEffects": "codrops/CreativeLinkEffects#61ff3ec23019418df6b5cc935bd3f976e35b1e2c",
-    "gmaps": "~0.4.14"
+    "fontawesome": "~4.2.0"
   }
 }

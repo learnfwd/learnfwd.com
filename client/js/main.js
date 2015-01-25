@@ -1,22 +1,26 @@
-'use strict';
+// Load bower-installed libraries. Don't remove this
+require('bower-components');
 
-var $ = require('./shims/jquery');
 var _ = require('lodash');
+var $ = require('jquery');
+var loadcss = require('./loadcss');
+
 var MainView = require('./views/main');
 var Router = require('./router');
-var loadcss = require('./lib/loadcss');
-
+var Backbone = require('./shims/backbone');
 
 module.exports = {
   launch: _.once(function () {
     var self = window.app = this;
 
     this.router = new Router();
+    this.router.history = Backbone.history;
 
     //Wait for the DOM to be rendered.
     $(document).ready(function () {
+
+      // Asynchronously load our main CSS file. Required for critical CSS
       loadcss('/css/main.css');
-      loadcss('http://fonts.googleapis.com/css?family=Unica+One|Roboto:400,300,100|Roboto+Slab:400,300');
 
       //Initialize the main view.
       var mainView = self.view = new MainView({
@@ -29,18 +33,7 @@ module.exports = {
       //Listen for 'newPage' event from the router
       self.router.on('newPage', mainView.setPage, mainView);
 
-      //Verify if the enviromnet is localhost or not and use pushState URL accordingly
-      var isLocal = false;
-      if (window.location.host.indexOf('localhost') !== -1) {
-        // Use non-pushState URLs for localhost dev for BrowserSync.
-        isLocal = true;
-      }
-      var usePushState = !isLocal;
-
-      self.router.history.start({
-        root: '/',
-        pushState: usePushState
-      });
+      self.router.start();
     });
   }),
 
