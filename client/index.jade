@@ -58,9 +58,11 @@ html
     //endbower
     //- Add additional CSS links here if you need any
     //- CSS files installed with Bower are included automatically
-    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Unica+One|Roboto:400,300,100|Roboto+Slab:400,300")
     link(rel="stylesheet", href="/css/main.css")
     //endbuild
+
+    //- This was added outside the semantic comments because it's a remote link and can't be bundled in main.css
+    link(rel="stylesheet", href="http://fonts.googleapis.com/css?family=Unica+One|Roboto:400,300,100|Roboto+Slab:400,300")
 
   body
     #main-view
