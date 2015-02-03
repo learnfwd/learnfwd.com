@@ -30,26 +30,33 @@ module.exports = Backbone.Router.extend({
 
   contact: function () {
     this.trigger('newPage', new ContactPage({}));
+    ga('send', 'pageview', '/contact');
   },
 
   manifesto: function () {
     this.trigger('newPage', new ManifestoPage({}));
+    ga('send', 'pageview', '/manifesto');
+
   },
 
   features: function () {
     this.trigger('newPage', new FeaturesPage({}));
+    ga('send', 'pageview', '/features');
   },
 
   demo: function () {
     this.trigger('newPage', new DemoPage({}));
+    ga('send', 'pageview', '/demo');
   },
 
   pricing: function () {
     this.trigger('newPage', new PricingPage({}));
+    ga('send', 'pageview', '/pricing');
   },
 
   team: function () {
     this.trigger('newPage', new TeamPage({}));
+    ga('send', 'pageview', '/team');
   },
 
   start: function () {
