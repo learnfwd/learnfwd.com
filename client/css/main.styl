@@ -25,6 +25,9 @@ body
     background-size: cover
     background-position: center center
     min-height: 100vh
+  .features
+    margin-bottom: 1em
+
 .team-page
   [role="page-container"]
     background-image: url('/assets/img/bg-team.jpg')
@@ -42,13 +45,17 @@ body
     // width: 100vw
     // height: 100vh
 
-.container 
+.contact-page
+  [role="page-container"]
+    min-height: 80vh
+
+.container
   color: white
   &.container-contact
     .content
       padding-left: 1em
       padding-right: 1em
-      
+
 
 .content
   padding: 25px 0px
@@ -93,7 +100,7 @@ body
     &:hover
       text-decoration: none
       border-bottom: 2px solid white
-      
+
   @media(max-width: 992px)
     p
       text-align: center
@@ -109,7 +116,7 @@ body
 .inline-block
   display: inline-block
 
-.pricing-page 
+.pricing-page
   > .stripe
     background: red
     position: relative
