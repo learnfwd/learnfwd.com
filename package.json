@@ -35,6 +35,10 @@
   "bugs": {
     "url": "https://github.com/learnfwd/learnfwd.com/issues"
   },
+  "engines": {
+    "npm": "^2.1.x",
+    "node": "^0.10.x"
+  },
   "homepage": "https://github.com/learnfwd/learnfwd.com",
   "devDependencies": {},
   "dependencies": {
